@@ -1,6 +1,6 @@
 {
   "name": "sergey-components-library",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/mag-component-library.js",
   "module": "dist/mag-component-library.es.js",
@@ -16,13 +16,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "polished": "^3.6.5"
+    "polished": "^3.6.5",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@storybook/addon-knobs": "^6.0.10",

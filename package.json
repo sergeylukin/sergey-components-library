@@ -1,6 +1,6 @@
 {
   "name": "sergey-components-library",
-  "version": "1.9.8",
+  "version": "1.9.9",
   "description": "",
   "main": "dist/mag-component-library.js",
   "module": "dist/mag-component-library.es.js",
@@ -17,8 +17,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^11.2.0",
-    "emotion-theming": "^11.0.0",
     "polished": "^3.6.5"
   },
   "devDependencies": {

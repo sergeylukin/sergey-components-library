@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from '@emotion/react';
+import { ThemeProvider } from 'emotion-theming';
 import { boolean, text } from '@storybook/addon-knobs';
 import decorators from '../.storybook/utils';
 import { theme as defaultTheme } from '../utils';

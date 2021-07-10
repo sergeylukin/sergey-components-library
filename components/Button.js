@@ -98,7 +98,6 @@ const StyledButton = ({
   if (isObjectEmpty(theme)) {
     theme = defaultTheme;
   }
-  console.log(theme);
 
   const fontSizeBySize = buttonSizeProps[size]?.fontSize;
   const paddingBySize = buttonSizeProps[size]?.padding;
@@ -110,7 +109,7 @@ const StyledButton = ({
     cursor: 'pointer',
     opacity: disabled && 0.7,
     transition: 'all 0.3s linear',
-    padding: 100,
+    padding: buttonSizeProps.medium.padding,
     fontSize: buttonSizeProps.medium.fontSize,
     borderRadius: theme.shape.borderRadius,
     fontFamily: theme.typography.fontFamily,

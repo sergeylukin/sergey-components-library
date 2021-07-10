@@ -40,8 +40,9 @@ Outline.args = {
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  children: 'Button',
 };
+
 const theme = {
   ...defaultTheme,
   palette: {
@@ -52,7 +53,6 @@ const theme = {
     },
   },
 };
-
 export const SolidWithTheme = Template.bind({});
 SolidWithTheme.args = {
   children: 'Button',

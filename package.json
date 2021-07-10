@@ -1,6 +1,6 @@
 {
   "name": "sergey-components-library",
-  "version": "1.9.9",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/mag-component-library.js",
   "module": "dist/mag-component-library.es.js",

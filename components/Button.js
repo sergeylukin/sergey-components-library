@@ -5,7 +5,6 @@ import {
   spacing,
   fontSizes,
   theme as defaultTheme,
-  mergeDeep,
 } from '../utils';
 
 const buttonSizeProps = {
@@ -96,14 +95,9 @@ const StyledButton = ({
   disabled,
   theme,
 }) => {
-  console.log('BEFORE');
-  console.log(theme);
   if (isObjectEmpty(theme)) {
     theme = defaultTheme;
-  } else {
-    theme = mergeDeep(defaultTheme, theme);
   }
-  console.log('AFTER');
   console.log(theme);
 
   const fontSizeBySize = buttonSizeProps[size]?.fontSize;

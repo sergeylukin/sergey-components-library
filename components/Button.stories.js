@@ -44,7 +44,7 @@ const theme = {
   ...defaultTheme,
   palette: {
     ...defaultTheme.palette,
-    orange: {
+    primary: {
       main: '#F34706',
       light: '#FF5964',
     },
@@ -56,7 +56,7 @@ export const solidButtonWithTheme = () => {
     <ThemeProvider theme={theme}>
       <Button
         variant={text('variant', 'solid')}
-        color={text('color', 'orange')}
+        color={text('color', 'primary')}
         size={text('size', 'medium')}
         disabled={boolean('disabled', false)}
         enableElevation={boolean('enableElevation', false)}

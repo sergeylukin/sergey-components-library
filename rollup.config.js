@@ -10,7 +10,7 @@ const pkg = JSON.parse(
 
 export default {
   input: 'components',
-  external: ['react', '@emotion/core', '@emotion/styled'],
+  external: ['react', 'react-dom', '@emotion/core', '@emotion/styled'],
   plugins: [
     babel({
       exclude: 'node_modules/**',

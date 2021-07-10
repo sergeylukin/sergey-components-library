@@ -95,6 +95,8 @@ const StyledButton = ({
   disabled,
   theme,
 }) => {
+  console.log('BEFORE')
+  console.log(theme)
   if (isObjectEmpty(theme)) {
     theme = defaultTheme;
   }
@@ -109,7 +111,7 @@ const StyledButton = ({
     cursor: 'pointer',
     opacity: disabled && 0.7,
     transition: 'all 0.3s linear',
-    padding: buttonSizeProps.medium.padding,
+    padding: 100,
     fontSize: buttonSizeProps.medium.fontSize,
     borderRadius: theme.shape.borderRadius,
     fontFamily: theme.typography.fontFamily,

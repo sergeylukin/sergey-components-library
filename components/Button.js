@@ -95,11 +95,15 @@ const StyledButton = ({
   disabled,
   theme,
 }) => {
-  console.log('BEFORE')
-  console.log(theme)
+  console.log('BEFORE');
+  console.log(theme);
   if (isObjectEmpty(theme)) {
     theme = defaultTheme;
+  } else {
+    theme = { ...defaultTheme, ...theme };
   }
+  console.log('AFTER');
+  console.log(theme);
 
   const fontSizeBySize = buttonSizeProps[size]?.fontSize;
   const paddingBySize = buttonSizeProps[size]?.padding;

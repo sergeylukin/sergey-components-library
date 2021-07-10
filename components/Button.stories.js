@@ -1,45 +1,47 @@
 import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
-import { boolean, text } from '@storybook/addon-knobs';
-import decorators from '../.storybook/utils';
 import { theme as defaultTheme } from '../utils';
-import { Button } from './';
+
+import { Button } from './Button';
 
 export default {
   title: 'Components/Button',
-  decorators,
+  component: Button,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 };
 
-export const solidButton = () => {
-  return <Button> Default Solid Button </Button>;
+const Template = (args) => <Button {...args} />;
+
+export const Solid = Template.bind({});
+Solid.args = {
+  children: 'Button',
 };
 
-export const solidButtonWithProps = () => {
-  return (
-    <Button
-      color={text('color', '')}
-      size={text('size', '')}
-      disabled={boolean('disabled', false)}
-      enableElevation={boolean('enableElevation', false)}
-    >
-      Solid Button
-    </Button>
-  );
+export const SolidWithProps = Template.bind({});
+SolidWithProps.args = {
+  children: 'Button',
+  color: 'primary',
+  size: 'large',
+  disabled: false,
+  enableElevation: false
 };
 
-export const outlineButtonWithProps = () => {
-  return (
-    <Button
-      variant="outline"
-      size={text('size', '')}
-      disabled={boolean('disabled', false)}
-      enableElevation={boolean('enableElevation', false)}
-    >
-      Outline Button
-    </Button>
-  );
+export const Outline = Template.bind({});
+Outline.args = {
+  children: 'Button',
+  variant: "outline",
+  size: 'small',
+  disabled: false,
+  enableElevation: false,
 };
 
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  label: 'Button',
+};
 const theme = {
   ...defaultTheme,
   palette: {
@@ -51,18 +53,13 @@ const theme = {
   },
 };
 
-export const solidButtonWithTheme = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Button
-        variant={text('variant', 'solid')}
-        color={text('color', 'primary')}
-        size={text('size', 'medium')}
-        disabled={boolean('disabled', false)}
-        enableElevation={boolean('enableElevation', false)}
-      >
-        Outline Button
-      </Button>
-    </ThemeProvider>
-  );
+export const SolidWithTheme = Template.bind({});
+SolidWithTheme.args = {
+  children: 'Button',
+  variant: 'solid',
+  color: 'primary',
+  size: 'medium',
+  disabled: false,
+  enableElevation: false,
 };
+SolidWithTheme.decorators = [(Story) => <ThemeProvider theme={theme}><Story/></ThemeProvider>];
